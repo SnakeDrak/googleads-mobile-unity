@@ -120,7 +120,7 @@ public class Banner {
 
         switch (positionCode) {
           case POSITION_TOP:
-            adParams.gravity = Gravity.CENTER;
+            adParams.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
             break;
           case POSITION_BOTTOM:
             adParams.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
