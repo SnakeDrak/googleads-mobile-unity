@@ -39,6 +39,9 @@ public class Banner {
 
   /** Banner position constant for the bottom right of the screen. */
   private static final int POSITION_BOTTOM_RIGHT = 5;
+  
+  /** Centra vertical y horizontalmente **/
+  private static final int POSITION_CENTER = 6;
 
   /** The {@link AdView} to display to the user. */
   private AdView adView;
@@ -117,7 +120,7 @@ public class Banner {
 
         switch (positionCode) {
           case POSITION_TOP:
-            adParams.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            adParams.gravity = Gravity.CENTER;
             break;
           case POSITION_BOTTOM:
             adParams.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
@@ -134,6 +137,9 @@ public class Banner {
           case POSITION_BOTTOM_RIGHT:
             adParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
             break;
+		  case POSITION_CENTER:
+			adParams.gravity = Gravity.CENTER;
+			break;
         }
         activity.addContentView(adView, adParams);
       }
